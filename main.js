@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
             this.particles = [];
             this.collisions = [];
             this.floatingMessages = [];
-            if (mobilecheck) this.maxParticles = 5;
+            if (mobilecheck) this.maxParticles = 1;
             else this.maxParticles = 200;
             this.enemyTimer = 0;
             this.enemyInterval = 1000;
