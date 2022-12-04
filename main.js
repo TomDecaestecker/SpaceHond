@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
             this.particles = [];
             this.collisions = [];
             this.floatingMessages = [];
-            this.maxParticles = 50;
+            this.maxParticles = 10;
             this.enemyTimer = 0;
             this.enemyInterval = 1000;
             this.score = 0;
