@@ -29,15 +29,21 @@ window.addEventListener("load", function () {
             this.particles = [];
             this.collisions = [];
             this.floatingMessages = [];
-            if (navigator.userAgentData.mobile) this.maxParticles = 10;
-            else this.maxParticles = 200;
+            if (navigator.userAgentData.mobile) {
+                this.enemyInterval = 2000;
+                this.maxParticles = 5;
+            }
+            else {
+                this.enemyInterval = 1000;
+                this.maxParticles = 200;
+            }
             this.enemyTimer = 0;
             this.enemyInterval = 1000;
             this.score = 0;
             this.winningScore = 10;
             this.debug = false;
             this.fontColor = 'black';
-            this.maxTime = 20000;
+            this.maxTime = 25000;
             this.time = this.maxTime;
             this.gameOver = false;
             this.gameWin = false;
