@@ -54,7 +54,7 @@ window.addEventListener("load", function () {
         update(deltaTime) {
             //game conditions
             if (this.time > deltaTime && !this.gameOver) this.time -= deltaTime;
-            else if (this.particles == []) this.gameOver = true;
+            else this.gameOver = true;
             if (this.gameLoss && this.player.currentState != this.player.states[6]) this.player.setState(6, 1);
             if (this.input.keys.includes('ArrowDown') && this.gameOver) this.restart();
 
@@ -69,7 +69,7 @@ window.addEventListener("load", function () {
             } else {
                 this.enemyTimer += deltaTime;
             }
-            if (this.gameWin) this.enemies.forEach(e => e.markedForDeletion = true);
+            if (this.gameOver) this.enemies.forEach(e => e.markedForDeletion = true);
             this.enemies.forEach(e => e.update(deltaTime));
             //particles
             this.particles.forEach(particle => particle.update());
