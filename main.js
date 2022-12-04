@@ -54,7 +54,7 @@ window.addEventListener("load", function () {
         update(deltaTime) {
             //game conditions
             if (this.time > deltaTime && !this.gameOver) this.time -= deltaTime;
-            else this.gameOver = true;
+            else if (this.particles == []) this.gameOver = true;
             if (this.gameLoss && this.player.currentState != this.player.states[6]) this.player.setState(6, 1);
             if (this.input.keys.includes('ArrowDown') && this.gameOver) this.restart();
 
